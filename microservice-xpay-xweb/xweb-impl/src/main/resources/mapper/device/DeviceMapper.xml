@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="az.xpay.xweb.impl.mapper.device.DeviceMapper">
+
+    <sql id="Base_Column_List">
+        dv.`id` id, dv.`devicename` deviceName, dv.`nickname` nickName, dv.`uniquecode` uniqueCode
+    </sql>
+
+    <select id="getDeviceList" resultType="az.xpay.xweb.api.domain.device.DeviceDM">
+        SELECT
+        <include refid="Base_Column_List" />
+        FROM sysbase.`b_device` dv
+    </select>
+
+</mapper>

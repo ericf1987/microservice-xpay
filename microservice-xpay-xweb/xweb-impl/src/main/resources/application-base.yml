@@ -1,0 +1,50 @@
+#启动端口
+server:
+  port: 9080
+
+spring:
+  profiles:
+    active: dev
+  application:
+    name: xweb-impl
+#  profiles:
+#    active: @project.environment@
+
+## 开发环境 数据源信息
+base:
+  datasource:
+    url: jdbc:mysql://rm-bp1s2c6js6podc1baro.mysql.rds.aliyuncs.com:3306/
+    username: devuser
+    password: Anzhi2019
+    driver: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+
+## Mybatis 配置
+mybatis:
+  typeAliasesPackage: ax.xpay.xweb
+  mapperLocations: classpath*:mapper/**/*.xml
+  configLocation:
+    cacheEnabled: true
+    lazyLoadingEnabled: true
+    aggressiveLazyLoading: true
+    multipleResultSetsEnabled: true
+    useColumnLabel: true
+    useGeneratedKeys: false
+    autoMappingBehavior: PARTIAL
+    defaultExecutorType: SIMPLE
+    mapUnderscoreToCamelCase: true
+    localCacheScope: SESSION
+    jdbcTypeForNull: NULL
+
+## Actuator监控端口
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,refresh,env,bus-refresh
+  endpoint:
+    health:
+      show-details: always
+    info:
+      enabled: true
+

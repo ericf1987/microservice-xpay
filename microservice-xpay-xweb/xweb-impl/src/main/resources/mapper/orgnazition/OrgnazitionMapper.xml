@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="az.xpay.xweb.impl.mapper.organization.OrganizationMapper">
+
+    <sql id="Base_Column_List">
+        org.id id, org.wxogid wxOrgid, org.schoolname schoolName
+    </sql>
+
+    <select id="getOrgnazitionList" resultType="az.xpay.xweb.api.domain.organization.OrganizationDM">
+
+        SELECT
+        <include refid="Base_Column_List" />
+        FROM sysbase.`s_organization` org
+
+    </select>
+
+</mapper>

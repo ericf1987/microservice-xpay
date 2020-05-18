@@ -1,0 +1,8 @@
+## 开发环境 数据源信息
+base:
+  datasource:
+    url: jdbc:mysql://rm-bp1s2c6js6podc1baro.mysql.rds.aliyuncs.com:3306/
+    username: devuser
+    password: Anzhi2019
+    driver: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
