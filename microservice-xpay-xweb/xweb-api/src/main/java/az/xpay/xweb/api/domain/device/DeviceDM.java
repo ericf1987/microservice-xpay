@@ -4,6 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
+
 /**
  * 设备领域
  * @author Eric F
@@ -13,11 +15,30 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class DeviceDM {
+public class DeviceDM implements Serializable {
 
     private String id;
     private String deviceName;
     private String nickName;
     private String uniqueCode;
 
+    public DeviceDM setId(String id){
+        this.id = id;
+        return this;
+    }
+
+    public DeviceDM setDeviceName(String deviceName) {
+        this.deviceName = deviceName;
+        return this;
+    }
+
+    public DeviceDM setNickName(String nickName) {
+        this.nickName = nickName;
+        return this;
+    }
+
+    public DeviceDM setUniqueCode(String uniqueCode) {
+        this.uniqueCode = uniqueCode;
+        return this;
+    }
 }

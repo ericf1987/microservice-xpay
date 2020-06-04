@@ -1,0 +1,29 @@
+#启动端口
+server:
+  port: 9080
+
+spring:
+  profiles:
+    active: dev
+  application:
+    name: xweb-cache
+  redis:
+    database: 0
+    host: 47.114.108.188
+    post: 6379
+    password: Anzhi2019
+#  profiles:
+#    active: @project.environment@
+
+## Actuator监控端口
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,refresh,env,bus-refresh
+  endpoint:
+    health:
+      show-details: always
+    info:
+      enabled: true
+

@@ -1,0 +1,9 @@
+## 测试环境 数据源信息
+spring:
+  application:
+    name: xweb-cache
+  redis:
+    database: 0
+    host: 47.114.108.188
+    post: 6379
+    password: Anzhi2019
