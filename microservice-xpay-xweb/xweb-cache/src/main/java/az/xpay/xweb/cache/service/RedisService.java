@@ -24,17 +24,17 @@ public class RedisService {
     @Autowired
     ValueOperations<String, Object> valueOperations;
 
-    public void test(){
+    public void test() {
 //        redisTemplate.setHashValueSerializer(new StringRedisSerializer());
 //        redisTemplate.setValueSerializer(new StringRedisSerializer());
         DeviceDM deviceDM = new DeviceDM().setId("100").setDeviceName("终端设备100").setNickName("zd100").setUniqueCode("zd100");
         String key = "device_" + deviceDM.getId();
         Boolean hasKey = redisTemplate.hasKey(key);
-        if(!hasKey){
-            valueOperations.set("device", deviceDM, 100, TimeUnit.SECONDS);
+        if (!hasKey) {
+            valueOperations.set(key, deviceDM, 100, TimeUnit.SECONDS);
             log.info("写入缓存：key -> {}", key);
-        }else{
-            DeviceDM d = (DeviceDM)valueOperations.get(key);
+        } else {
+            DeviceDM d = (DeviceDM) valueOperations.get(key);
             log.info("读取缓存：device -> {}", d.toString());
         }
 
