@@ -38,7 +38,7 @@ public class CacheConfig {
     }
 
     @Bean
-    public RedisTemplate<String,Object> functionDomainRedisTemplate() {
+    public RedisTemplate<String,Object> redisTemplate() {
         RedisTemplate<String,Object> redisTemplate = new RedisTemplate<>();
         initDomainRedisTemplate(redisTemplate, redisConnectionFactory);
         return redisTemplate;
