@@ -23,6 +23,7 @@ base:
 mybatis:
   typeAliasesPackage: ax.xpay.xweb
   mapperLocations: classpath*:mapper/**/*.xml
+
   configLocation:
     cacheEnabled: true
     lazyLoadingEnabled: true

@@ -7,7 +7,10 @@
 		<module>xweb-api</module>
 		<module>xweb-impl</module>
 		<module>xweb-cache</module>
-	</modules>
+        <module>xweb-amqp</module>
+        <module>xweb-drools</module>
+        <module>xweb-common</module>
+    </modules>
 	<parent>
 		<groupId>az.xpay</groupId>
 		<artifactId>microservice-xpay</artifactId>

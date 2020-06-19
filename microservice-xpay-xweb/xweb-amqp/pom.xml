@@ -9,12 +9,11 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>xweb-cache</artifactId>
+    <artifactId>xweb-amqp</artifactId>
 
-    <name>xweb-cache</name>
+    <name>xweb-amqp</name>
     <!-- FIXME change it to the project's website -->
     <url>http://www.example.com</url>
-    <packaging>jar</packaging>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -23,32 +22,26 @@
     </properties>
 
     <dependencies>
+
         <!-- Web 依赖 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
-        <!-- Spring Boot Redis 依赖 -->
+        <!-- 测试依赖 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-redis</artifactId>
-            <version>${spring-boot-starter-redis.version}</version>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
         </dependency>
 
-        <!-- Redis Core API -->
-<!--        <dependency>-->
-<!--            <groupId>redis.clients</groupId>-->
-<!--            <artifactId>jedis</artifactId>-->
-<!--            <version>${redis.core.version}</version>-->
-<!--        </dependency>-->
-
+        <!-- rabbit mq -->
         <dependency>
-            <groupId>az.xpay</groupId>
-            <artifactId>xweb-api</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-amqp</artifactId>
+            <version>${spring-boot-starter-amqp.version}</version>
         </dependency>
-
     </dependencies>
 
     <build>

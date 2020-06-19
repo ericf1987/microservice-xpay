@@ -54,19 +54,22 @@
     <properties>
         <java.version>11</java.version>
         <junit.version>4.12</junit.version>
-        <mybatis-spring-boot>1.2.0</mybatis-spring-boot>
-        <mysql-connector>5.1.39</mysql-connector>
-        <spring-boot-starter-redis-version>1.3.2.RELEASE</spring-boot-starter-redis-version>
+        <mybatis-spring-boot.version>1.2.0</mybatis-spring-boot.version>
+        <mysql-connector.version>5.1.39</mysql-connector.version>
+        <spring-boot-starter-redis.version>1.3.2.RELEASE</spring-boot-starter-redis.version>
         <druid.version>1.1.10</druid.version>
         <pagehelper.version>5.1.4</pagehelper.version>
         <pagehelper-spring.version>1.2.10</pagehelper-spring.version>
-<!--        <elasticsearch-version>7.4.2</elasticsearch-version>-->
+        <!--        <elasticsearch-version>7.4.2</elasticsearch-version>-->
         <hutool-version>5.0.7</hutool-version>
         <lombok.version>1.18.12</lombok.version>
-<!--        <springloaded.version>1.2.8.RELEASE</springloaded.version>-->
+        <!--        <springloaded.version>1.2.8.RELEASE</springloaded.version>-->
         <logback-core.version>1.2.3</logback-core.version>
         <log4j.version>1.2.17</log4j.version>
         <guava.version>20.0</guava.version>
+        <spring-boot-starter-amqp.version>2.2.7.RELEASE</spring-boot-starter-amqp.version>
+        <drools-core.version>7.39.0.CR1</drools-core.version>
+        <drools-compiler.version>7.39.0.CR1</drools-compiler.version>
     </properties>
 
 
@@ -93,11 +96,11 @@
             <optional>true</optional>
         </dependency>
 
-<!--        <dependency>-->
-<!--            <groupId>org.springframework</groupId>-->
-<!--            <artifactId>springloaded</artifactId>-->
-<!--            <version>${springloaded.version}</version>-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.springframework</groupId>-->
+        <!--            <artifactId>springloaded</artifactId>-->
+        <!--            <version>${springloaded.version}</version>-->
+        <!--        </dependency>-->
 
         <!-- 日志相关 -->
         <dependency>
@@ -159,13 +162,13 @@
     <!--	</distributionManagement>-->
 
 
-<!--    <build>-->
-<!--        <plugins>-->
-<!--            <plugin>-->
-<!--                <groupId>org.springframework.boot</groupId>-->
-<!--                <artifactId>spring-boot-maven-plugin</artifactId>-->
-<!--            </plugin>-->
-<!--        </plugins>-->
-<!--    </build>-->
+    <!--    <build>-->
+    <!--        <plugins>-->
+    <!--            <plugin>-->
+    <!--                <groupId>org.springframework.boot</groupId>-->
+    <!--                <artifactId>spring-boot-maven-plugin</artifactId>-->
+    <!--            </plugin>-->
+    <!--        </plugins>-->
+    <!--    </build>-->
 
 </project>

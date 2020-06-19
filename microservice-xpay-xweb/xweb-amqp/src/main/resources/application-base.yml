@@ -1,17 +1,18 @@
 #启动端口
 server:
-  port: 9082
+  port: 9083
 
 spring:
   profiles:
     active: dev
   application:
-    name: xweb-cache
-  redis:
-    database: 0
-    host: 47.114.108.188
-    post: 6379
-    password: Anzhi2019
+    name: xweb-amqp
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: fengye
+    password: fengye
+    virtualHost: 5672
 #  profiles:
 #    active: @project.environment@
 

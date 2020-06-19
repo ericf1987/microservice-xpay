@@ -9,12 +9,11 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>xweb-cache</artifactId>
+    <artifactId>xweb-drools</artifactId>
 
-    <name>xweb-cache</name>
+    <name>xweb-drools</name>
     <!-- FIXME change it to the project's website -->
     <url>http://www.example.com</url>
-    <packaging>jar</packaging>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -23,32 +22,24 @@
     </properties>
 
     <dependencies>
-        <!-- Web 依赖 -->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.11</version>
+            <scope>test</scope>
         </dependency>
 
-        <!-- Spring Boot Redis 依赖 -->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-redis</artifactId>
-            <version>${spring-boot-starter-redis.version}</version>
+            <groupId>org.drools</groupId>
+            <artifactId>drools-core</artifactId>
+            <version>${drools-core.version}</version>
         </dependency>
 
-        <!-- Redis Core API -->
-<!--        <dependency>-->
-<!--            <groupId>redis.clients</groupId>-->
-<!--            <artifactId>jedis</artifactId>-->
-<!--            <version>${redis.core.version}</version>-->
-<!--        </dependency>-->
-
         <dependency>
-            <groupId>az.xpay</groupId>
-            <artifactId>xweb-api</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <groupId>org.drools</groupId>
+            <artifactId>drools-compiler</artifactId>
+            <version>${drools-compiler.version}</version>
         </dependency>
-
     </dependencies>
 
     <build>
